@@ -61,6 +61,7 @@ table.issue-index td {
   border-bottom: solid 1px #ddd;
   border-top: solid 1px #ddd;
   padding: 0.25em;
+  vertical-align: top;
 }
 table.issue-index th {
   text-align: left;
@@ -72,8 +73,9 @@ table.issue-index th {
 table.issue-meta {
   width: 100%;
   padding: 0.25em;
-  border: solid 1px #777;
+  border: solid 1px #aaa;
   margin-bottom: 1em;
+  background: #f7f7f7;
 }
 table.issue-meta th {
   padding: 0.1em 0.25em;
@@ -85,7 +87,13 @@ table.issue-meta td {
   padding: 0.1em 0.25em;
 }
 div.comment {
+}
+div.comment-meta {
   margin: 0.5em 0;
-  padding: 0.5em;
-  border: solid 1px #777;
+  padding: 0.25em 0.5em;
+  border: solid 1px #aaa;
+  background: #f7f7f7;
+}
+div.comment-meta a {
+  color: #000;
 }

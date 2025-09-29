@@ -21,7 +21,7 @@ END {
 		printf "  <td><a href='%d/'>#%d</a></td>\n", n, n
 		printf "  <td>%s</td>\n", escape(title)
 		#printf "  <td>%d</td>\n", c
-		printf "  <td>%s</td>\n", modif
+		printf "  <td style='white-space: nowrap'>%s</td>\n", modif
 		printf "  <td><span class='issue-state state-%s'>%s</span></td>\n", state, state
 		printf "</tr>\n"
 		printf "\n"

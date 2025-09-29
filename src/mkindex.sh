@@ -13,7 +13,7 @@ cat <<EOF
   <table class='issue-index'>
     <tr>
       <th>Bug</th>
-      <th style='width: 70%'>Title</th>
+      <th>Title</th>
       <th>Updated</th>
       <th>State</th>
     </tr>

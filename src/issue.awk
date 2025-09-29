@@ -51,7 +51,9 @@ s==3 && /^Date: / { sub("Date: ", ""); com_date=$0 }
 s==3 && $0 == "" {
 	printf "\n"
 	printf "<div id='c%d' class='comment'>\n", c
-	printf "  <a href='#c%d'>%s</a> on <i>%s</i>:<br>\n", c, com_author, com_date
+	printf "  <div class='comment-meta'>\n"
+	printf "    <a href='#c%d'>%s</a> on <i>%s</i>\n", c, com_author, com_date
+	printf "  </div>\n"
 	printf "\n"
 	s = 4
 	next
