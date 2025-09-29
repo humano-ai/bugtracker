@@ -74,6 +74,7 @@ END {
 		printf "</div>\n"
 	}
 	printf "\n\n"
+	printf "<footer><a href='/'>&larr; Index</a></footer>"
 	printf "</body>"
 	printf "</html>"
 

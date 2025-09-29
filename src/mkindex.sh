@@ -23,4 +23,5 @@ cat "$@"
 
 printf '\n'
 printf '  </table>\n'
+cat src/footer.html
 printf '</body>\n'
