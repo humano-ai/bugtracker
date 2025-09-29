@@ -3,6 +3,7 @@
 cat <<EOF
 <!doctype html>
 <head>
+  <meta charset='utf-8' />
   <title>Dillo Bug Tracker</title>
   <link rel='stylesheet' href='/style.css' type='text/css' />
 </head>

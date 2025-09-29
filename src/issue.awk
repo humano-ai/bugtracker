@@ -17,6 +17,7 @@ s==1 && $0 == "" {
 	printf "<!doctype html>\n"
 	printf "<html>\n"
 	printf "<head>\n"
+	printf "  <meta charset='utf-8' />\n"
 	printf "  <title>%s</title>\n", title
 	printf "  <link rel='stylesheet' href='/style.css' type='text/css' />\n"
 	printf "</head>\n"
