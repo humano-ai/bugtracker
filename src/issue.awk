@@ -1,3 +1,12 @@
+function escape(t) {
+	# Must do this one first
+	gsub(/&/, "\\&amp;", t);
+	gsub(/"/, "\\&quot;", t)
+	gsub(/</, "\\&lt;", t);
+	gsub(/>/, "\\&gt;", t);
+	return t;
+}
+
 BEGIN { FS=": "; s=1; c=0 }
 
 s==1 && /^Title: /   { sub("Title: ", "");    title=$0 }
@@ -13,7 +22,7 @@ s==1 && $0 == "" {
 	printf "</head>\n"
 	printf "<body>\n"
 	printf "  <table class='issue-meta'>\n"
-	printf "    <tr><th>Title</th><td>%s</td></tr>\n", title
+	printf "    <tr><th>Title</th><td>%s</td></tr>\n", escape(title)
 	printf "    <tr><th>Author</th><td>%s</td></tr>\n", author
 	printf "    <tr><th>Created</th><td>%s</td></tr>\n", date
 	printf "    <tr><th>State</th>"

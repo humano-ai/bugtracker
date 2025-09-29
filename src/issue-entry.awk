@@ -1,3 +1,12 @@
+function escape(t) {
+	# Must do this one first
+	gsub(/&/, "\\&amp;", t);
+	gsub(/"/, "\\&quot;", t)
+	gsub(/</, "\\&lt;", t);
+	gsub(/>/, "\\&gt;", t);
+	return t;
+}
+
 BEGIN { FS=": "; c=0 }
 
 c == 0 && /^Title: /   { sub("Title: ", "");   title=$0 }
@@ -10,7 +19,7 @@ END {
 	if (s == "" || state == s) {
 		printf "<tr>\n"
 		printf "  <td><a href='%d/'>#%d</a></td>\n", n, n
-		printf "  <td>%s</td>\n", title
+		printf "  <td>%s</td>\n", escape(title)
 		#printf "  <td>%d</td>\n", c
 		printf "  <td>%s</td>\n", modif
 		printf "  <td><span class='issue-state state-%s'>%s</span></td>\n", state, state
