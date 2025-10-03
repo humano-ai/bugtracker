@@ -45,7 +45,7 @@ span.st {
   border: solid 1px #777;
 }
 .st-open {
-  background-color: #8f8;
+  background-color: #9f9;
 }
 .st-closed {
   background-color: #eee;
@@ -63,9 +63,17 @@ table.issue-index td {
   padding: 0.25em;
   vertical-align: top;
 }
+table.issue-index td.st {
+  text-align: center;
+}
+table.issue-index td.dt {
+  text-align: center;
+  white-space: nowrap;
+}
 table.issue-index th {
-  text-align: left;
+  border-collapse: collapse;
   background-color: #eee;
+  border: solid 1px #ddd;
   padding: 0.25em;
 }
 
