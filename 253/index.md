@@ -71,3 +71,34 @@ Similarly for CSRF protection:
 >    authorization server when making an authorization request.
 
 See: https://github.com/mastodon/mastodon/issues/31466
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sun, 19 Oct 2025 19:37:44 +0200
+
+Experimented with a new feature that allows sites to set third party cookies if
+they are explicitly enabled in `cookiesrc`. This seems to work, but it is less
+secure than the above suggestion in which we allow cookies if the root page is
+causing the redirection, not on resources.
+
+See: https://bugzilla.mozilla.org/show_bug.cgi?id=1465402 \
+See: https://issues.chromium.org/issues/40508226
+
+I'll need to think a bit more in how this could be potentially exploited by
+advertising companies to track users. Given that the user will ultimately need
+to enable any site from storing cookies, we at least already have a pretty good
+standard by default.
+
+The [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265) doesn't seem to
+explicitly document what should happen with cookies are set in a redirection.
+
+There are (at least) two cases that can cause the `requester` and `url`
+arguments of `Nav_open_url()` to have a different organization:
+
+1. The request is made by loading a resource from another server (image
+   or stylesheet).
+2. The request is made after a redirection of the root page to another server.
+
+There is also the potential case in which a request of a resource returns a
+redirect to another server, but we don't support redirections for resources, so
+we can ignore this case for now.
