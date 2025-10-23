@@ -32,6 +32,7 @@ pre {
   background: #f7f7f7;
   border-left: solid 2px #ccc;
   font-size: 14px;
+  overflow: auto;
 }
 .date {
   font-style: italic;
