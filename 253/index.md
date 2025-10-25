@@ -1,7 +1,7 @@
-Title: Consider allowing cookies after a 302 redirection
+Title: Allow cookies in a 302 redirection
 Author: rodarima
 Created: Tue, 20 Aug 2024 13:08:11 +0000
-State: open
+State: closed
 
 Currently Dillo only accepts cookies for the same organization that caused the
 initial request.
@@ -102,3 +102,9 @@ arguments of `Nav_open_url()` to have a different organization:
 There is also the potential case in which a request of a resource returns a
 redirect to another server, but we don't support redirections for resources, so
 we can ignore this case for now.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sat, 25 Oct 2025 19:01:48 +0200
+
+Fixed in https://git.dillo-browser.org/dillo/commit/?id=6a58684566f4d61bae7e3974023bc0989c3f2eb2
