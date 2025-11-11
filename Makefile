@@ -1,8 +1,8 @@
-all: gen out/style.css
+all: gen out/style.css out/favicon.png
 	killall -USR1 dillo || true
 
 gen:
 	buggy
 
-out/style.css: static/style.css
+out/%: static/%
 	cp $^ $@
