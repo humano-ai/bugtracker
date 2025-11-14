@@ -1,7 +1,7 @@
 Title: a_Tls_openssl_connect: Broken pipe
 Author: Rodrigo Arias Mallo
 Created: Tue, 11 Nov 2025 20:15:51 +0100
-State: open
+State: closed
 
 ```
 hop% gdb --args dillo https://9front.org/
@@ -102,3 +102,42 @@ a_Tls_openssl_connect: queued error: error:80000020:system library::Broken pipe
 Thread 1 "dillo" received signal SIGABRT, Aborted.
 0x00007ffff6e9894c in ?? () from /usr/lib/libc.so.6
 ```
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Fri, 14 Nov 2025 20:37:11 +0100
+
+From the backtrace:
+
+    #11 0x00005555555b4afa in Tls_close_by_key (connkey=3) at ../../../src/IO/tls_openssl.c:1085
+
+The problem seems to be in the `SSL_shutdown`:
+
+    if (c->do_shutdown && !SSL_in_init(c->ssl)) {
+       /* openssl 1.0.2f does not like shutdown being called during
+        * handshake, resulting in ssl_undefined_function in the error queue.
+        */
+       SSL_shutdown(c->ssl);
+    } else {
+       MSG("Tls_close_by_key: Avoiding SSL shutdown for: %s\n", URL_STR(c->url));
+    }
+    SSL_free(c->ssl);
+
+It is causing a SIGPIPE which is being ignored, but it is left in the error
+queue. Then in the next connection causes an abort.
+
+From the documentation:
+
+    RETURN VALUES
+           For both SSL_shutdown() and SSL_shutdown_ex() the following return
+           values can occur
+
+           [...]
+
+           <0  The shutdown was not successful.  Call SSL_get_error(3) with the
+               return value ret to find out the reason.  It can occur if an action
+               is needed to continue the operation for nonblocking BIOs.
+
+We need to flush the error queue before continuing.
+
+Fixed in https://git.dillo-browser.org/dillo/commit/?id=097ad90e5bc83d71e417e851109deb190164cdaa
