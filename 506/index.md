@@ -1,4 +1,4 @@
-Title: Segmentation fault in Amazon login form
+Title: Segmentation fault with display:none in form elements
 Author: Rodrigo Arias Mallo
 Created: Mon, 20 Oct 2025 20:53:56 +0200
 State: open
@@ -41,3 +41,9 @@ don't think the login will work, but we should not crash). Likely introduced by
 
 We need to handle the case in which we are submitting a form with non-displayed
 elements as they currently don't have an embed or resource.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Wed, 10 Dec 2025 19:52:27 +0100
+
+Reproduced in <https://www.teclis.com/> with any search term.
