@@ -1,7 +1,7 @@
 Title: Add command line tool to control the browser
 Author: rodarima
 Created: Sat, 30 Dec 2023 21:03:51 +0000
-State: open
+State: closed
 
 In order to run the tests without human interaction, we need a way to drive the browser and perform some actions programmatically. These actions could be performed with a command line utility `dillocli` that connects to the dpid server. Here are some examples:
 
@@ -105,3 +105,12 @@ We can use the same technique to launch multiple sessions in parallel by using s
   dillocli session end
 ) &
 ```
+
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Fri, 19 Dec 2025 18:31:55 +0100
+
+Implemented in
+<https://git.dillo-browser.org/dillo/commit/?id=0a871b497b4fae01136d1b514c625962d08fee18>
+with the `dilloc` command instead of `dillocli`.
