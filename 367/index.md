@@ -1,7 +1,7 @@
 Title: Custom page menu actions via dillorc
 Author: acmiyaguchi
 Created: Sun, 16 Mar 2025 21:55:11 +0000
-State: open
+State: closed
 
 The `link_action` option enables interesting expansions to dillo. For example:
 
@@ -37,3 +37,10 @@ Selecting the location URL copies it into the primary selection (XA_PRIMARY) of 
 Yes, this is planned.
 
 We can also replace the current tab with with the reader mode URL (or any other), by using something like `dillocli open --tab $tab rdrview:$url`, where $tab is provided as an envvar that uniquely identifies the current tab.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Mon, 22 Dec 2025 00:37:08 +0100
+
+Implemented in
+<https://git.dillo-browser.org/dillo/commit/?id=b784a3e512996dd8a7e80ceb56c48d8fa3007431>
