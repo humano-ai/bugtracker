@@ -1,7 +1,7 @@
 Title: Consider other platforms to host Dillo
 Author: rodarima
 Created: Tue, 26 Dec 2023 14:52:58 +0000
-State: open
+State: closed
 
 As discussed with @clehner, we may want to switch to a different platform that can also provide a CI system avoiding Copilot and their closed source nature.
 
@@ -108,3 +108,13 @@ Radicle seems to be funded by venture capital, so they will need to find a suita
 > Radicle has 15 institutional investors including [NFX](https://tracxn.com/d/venture-capital/nfx/__6V6UcYGwqq_nXCSVDCyXyDyfG46UkAhf0eaaGAdG4MI), [Cherry Ventures](https://platform.tracxn.com/a/d/company/55e8847ae4b0672c6cbc8808/cherry.vc) and [Coinbase](https://platform.tracxn.com/a/d/company/52bdc180e4b0420b03968e60/coinbase.com). [Naval Ravikant](https://tracxn.com/d/people/naval-ravikant/__zjY_8gmflKDzBLSv520Gkf9qM24BNrfFb_Vo_boSVAQ) and 2 others are Angel Investors in Radicle.
 
 I don't trust VC software, it tents to get real shitty over time.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sun, 01 Feb 2026 18:27:26 +0100
+
+Moved to our own server at <https://dillo-browser.org/> with a custom bug
+tracker and cgit to serve the git repositories. We keep a backup in Sourcehut at
+<https://git.sr.ht/~dillo/> and in Codeberg at <https://codeberg.org/dillo/>.
+
+See: <https://dillo-browser.org/news/migration-from-github/>
