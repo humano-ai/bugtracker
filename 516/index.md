@@ -1,7 +1,7 @@
 Title: Segfault while running SSL Labs CurveBall test
 Author: Rodrigo Arias Mallo
 Created: Thu, 15 Jan 2026 22:09:14 +0100
-State: open
+State: closed
 
 Reported-by: Alex
 
@@ -48,3 +48,10 @@ Segfault when loading https://www.ssllabs.com:10446/. Reproduced with LibreSSL
     AddressSanitizer can not provide additional info.
     SUMMARY: AddressSanitizer: SEGV (/usr/lib/libressl/libcrypto.so.57+0xae3a4) (BuildId: 15f17022dc7dbd5298bf906f2ef4e53d12c52015) in EVP_PKEY_id
     ==1123582==ABORTING
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sat, 14 Feb 2026 21:04:24 +0100
+
+Fixed in
+<https://git.dillo-browser.org/dillo/commit/?id=d51d6bf2b0b2971445b0501652dfd8e8e8ef00cf>
