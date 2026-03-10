@@ -1,4 +1,4 @@
-Title: [postmarketos/phosh] usage of SSL websites disables the onscreen keyboard effects
+Title: Usage of SSL websites disables the onscreen keyboard effects
 Author: lm2lm2
 Created: Tue, 06 May 2025 10:37:50 +0000
 State: open
