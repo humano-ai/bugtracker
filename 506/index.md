@@ -1,7 +1,7 @@
 Title: Segmentation fault with display:none in form elements
 Author: Rodrigo Arias Mallo
 Created: Mon, 20 Oct 2025 20:53:56 +0200
-State: open
+State: closed
 
 There is no resource for an input in the form:
 
@@ -47,3 +47,9 @@ From: Rodrigo Arias Mallo
 Date: Wed, 10 Dec 2025 19:52:27 +0100
 
 Reproduced in <https://www.teclis.com/> with any search term.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sun, 22 Mar 2026 20:35:10 +0100
+
+Fixed in <https://git.dillo-browser.org/dillo/commit/?id=8401530407bfc4adc545e1b6a344e4f5a336859a>
