@@ -1,0 +1,282 @@
+% dillo https://smolfedi.pollux.casa/login.php
+...
+Nav_open_url: new url='https://smolfedi.pollux.casa/login.php'
+Dns_server [0]: smolfedi.pollux.casa is 86.194.163.71
+Connecting to 86.194.163.71:443
+smolfedi.pollux.casa: TLSv1.3, cipher TLS_AES_256_GCM_SHA384
+ 0: ecdsa-with-SHA384 256-bit EC: /CN=pollux.casa
+ 1: sha256 384-bit EC: /C=US/O=Let's Encrypt/CN=E8
+ root: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+[cookies dpi]: Enabling cookies as per cookiesrc...
+[cookies dpi]: Cookies loaded: 1.
+[cookies dpi]: (v.1) accepting connections...
+>>> sending HTTP:
+GET /login.php HTTP/1.1\x0D
+Host: smolfedi.pollux.casa\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://smolfedi.pollux.casa/\x0D
+Connection: keep-alive\x0D
+\x0D
+
+<<< receiving HTTP:
+HTTP/1.1 200 OK
+X-Powered-By: PHP/8.5.4
+Set-Cookie: PHPSESSID=xxxxxxxx; expires=Mon, 11 May 2026 19:41:45 GMT; Max-Age=2678400; path=/; secure; HttpOnly; SameSite=Lax
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Content-type: text/html; charset=UTF-8
+Permissions-Policy: interest-cohort=()
+Accept-Ranges: bytes
+Content-Length: 1158
+Date: Fri, 10 Apr 2026 19:41:44 GMT
+Server: lighttpd/1.4.82
+
+
+[cookies dpi]: smolfedi.pollux.casa SETTING: PHPSESSID=xxxxxxxx; expires=Mon, 11 May 2026 19:41:45 GMT; Max-Age=2678400; path=/; secure; HttpOnly; SameSite=Lax
+[cookies dpi]: Cookie contains unknown attribute: 'SameSite'
+Nav_open_url: new url='https://smolfedi.pollux.casa/login.php'
+Connecting to 86.194.163.71:443
+[cookies dpi]: smolfedi.pollux.casa GETTING: Cookie: PHPSESSID=xxxxxxxx
+>>> sending HTTP:
+POST /login.php HTTP/1.1\x0D
+Host: smolfedi.pollux.casa\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://smolfedi.pollux.casa/\x0D
+Connection: keep-alive\x0D
+Content-Type: application/x-www-form-urlencoded\x0D
+Content-Length: 22\x0D
+Cookie: PHPSESSID=xxxxxxxx\x0D
+\x0D
+instance=fosstodon.org
+<<< receiving HTTP:
+HTTP/1.1 302 Found
+X-Powered-By: PHP/8.5.4
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Location: https://fosstodon.org/oauth/authorize?client_id=xxxxxxxx&redirect_uri=https%3A%2F%2Fsmolfedi.pollux.casa%2Fcallback.php&response_type=code&scope=read+write+follow&state=xxxxxx
+Content-type: text/html; charset=UTF-8
+Permissions-Policy: interest-cohort=()
+Content-Length: 0
+Date: Fri, 10 Apr 2026 19:41:51 GMT
+Server: lighttpd/1.4.82
+
+
+Redirect to: https://fosstodon.org/oauth/authorize?client_id=xxxxxxxx&redirect_uri=https%3A%2F%2Fsmolfedi.pollux.casa%2Fcallback.php&response_type=code&scope=read+write+follow&state=xxxxxx
+Nav_open_url: new url='https://fosstodon.org/oauth/authorize?client_id=xxxxxxxx&redirect_uri=https%3A%2F%2Fsmolfedi.pollux.casa%2Fcallback.php&response_type=code&scope=read+write+follow&state=xxxxxx'
+Dns_server [0]: fosstodon.org is 151.101.195.52 151.101.67.52 151.101.3.52 151.101.131.52
+Connecting to 151.101.195.52:443
+fosstodon.org: TLSv1.3, cipher TLS_AES_128_GCM_SHA256
+ 0: sha256 2048-bit RSA: /CN=fosstodon.org
+ 1: sha256 2048-bit RSA: /C=US/O=Let's Encrypt/CN=R13
+ root: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+>>> sending HTTP:
+GET /oauth/authorize?client_id=xxxxxxxx&redirect_uri=https%3A%2F%2Fsmolfedi.pollux.casa%2Fcallback.php&response_type=code&scope=read+write+follow&state=xxxxxx HTTP/1.1\x0D
+Host: fosstodon.org\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://fosstodon.org/\x0D
+Connection: keep-alive\x0D
+Pragma: no-cache\x0D
+Cache-Control: no-cache\x0D
+\x0D
+
+<<< receiving HTTP:
+HTTP/1.1 302 Found
+Connection: keep-alive
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+server: Mastodon
+x-frame-options: DENY
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: same-origin
+location: https://fosstodon.org/auth/sign_in
+cache-control: private, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; frame-ancestors 'none'; font-src 'self' https://fosstodon.org; img-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org; media-src 'self' data: https://fosstodon.org https://cdn.fosstodon.org; manifest-src 'self' https://fosstodon.org; form-action 'self'; child-src 'self' blob: https://fosstodon.org; worker-src 'self' blob: https://fosstodon.org; connect-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org; script-src 'self' https://fosstodon.org 'wasm-unsafe-eval'; frame-src 'self' https:; style-src 'self' https://fosstodon.org 'nonce-xxxxxx'
+set-cookie: _mastodon_session=cDqB2u...; path=/; httponly; samesite=lax; secure
+x-request-id: eb7ae8a3-47a8-4fb1-8e61-45c3181cda37
+x-runtime: 0.003530
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Fri, 10 Apr 2026 19:56:40 GMT
+X-Served-By: cache-par-lfpg1960039-PAR, cache-mad2200107-MAD
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1775851000.965864,VS0,VE34
+Strict-Transport-Security: max-age=300
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+
+[cookies dpi]: fosstodon.org SETTING: _mastodon_session=cDqB2u...; path=/; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
+Redirect to: https://fosstodon.org/auth/sign_in
+Nav_open_url: new url='https://fosstodon.org/auth/sign_in'
+Connecting to 151.101.195.52:443
+[cookies dpi]: fosstodon.org GETTING: Cookie: _mastodon_session=cDqB2u...
+>>> sending HTTP:
+GET /auth/sign_in HTTP/1.1\x0D
+Host: fosstodon.org\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://fosstodon.org/\x0D
+Connection: keep-alive\x0D
+Pragma: no-cache\x0D
+Cache-Control: no-cache\x0D
+Cookie: _mastodon_session=cDqB2u...
+\x0D
+
+<<< receiving HTTP:
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+server: Mastodon
+x-frame-options: DENY
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: same-origin
+cache-control: private, no-store
+etag: W/"4e0ed27fd2fb75b17b4657e8620ea7f6"
+content-security-policy: base-uri 'none'; default-src 'none'; frame-ancestors 'none'; font-src 'self' https://fosstodon.org; img-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org; media-src 'self' data: https://fosstodon.org https://cdn.fosstodon.org; manifest-src 'self' https://fosstodon.org; child-src 'self' blob: https://fosstodon.org; worker-src 'self' blob: https://fosstodon.org; connect-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org; script-src 'self' https://fosstodon.org 'wasm-unsafe-eval'; frame-src 'self' https:; style-src 'self' https://fosstodon.org 'nonce-xxxxxx'
+set-cookie: _mastodon_session=Z3F3gM...; path=/; httponly; samesite=lax; secure
+x-request-id: 5352b6f0-0172-4cdb-8f9d-8e25d7c5939b
+x-runtime: 0.011054
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Fri, 10 Apr 2026 19:56:40 GMT
+X-Served-By: cache-par-lfpb1150078-PAR, cache-toj-leto2350066-TOJ
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1775851000.086482,VS0,VE70
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=300
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+transfer-encoding: chunked
+
+
+[cookies dpi]: fosstodon.org SETTING: _mastodon_session=Z3F3gM...; path=/; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
+
+
+
+
+
+Nav_open_url: new url='https://fosstodon.org/auth/sign_in'
+Connecting to 151.101.195.52:443
+[cookies dpi]: fosstodon.org GETTING: Cookie: _mastodon_session=Z3F3gM...
+>>> sending HTTP:
+POST /auth/sign_in HTTP/1.1\x0D
+Host: fosstodon.org\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://fosstodon.org/\x0D
+Connection: keep-alive\x0D
+Content-Type: application/x-www-form-urlencoded\x0D
+Content-Length: 177\x0D
+Cookie: _mastodon_session=Z3F3gM...
+\x0D
+authenticity_token=xxx&user%5Bemail%5D=xxx&user%5Bpassword%5D=xxx&button=
+<<< receiving HTTP:
+HTTP/1.1 302 Found
+Connection: keep-alive
+Content-Length: 0
+Content-Type: text/html; charset=utf-8
+server: Mastodon
+x-frame-options: DENY
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: same-origin
+location: https://fosstodon.org/
+cache-control: private, no-store
+content-security-policy: base-uri 'none'; default-src 'none'; frame-ancestors 'none'; font-src 'self' https://fosstodon.org; img-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org; media-src 'self' data: https://fosstodon.org https://cdn.fosstodon.org; manifest-src 'self' https://fosstodon.org; form-action 'self'; child-src 'self' blob: https://fosstodon.org; worker-src 'self' blob: https://fosstodon.org; connect-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org; script-src 'self' https://fosstodon.org 'wasm-unsafe-eval'; frame-src 'self' https:; style-src 'self' https://fosstodon.org 'nonce-xxxxxx'
+set-cookie: _session_id=eyJfcm...; path=/; expires=Sat, 10 Apr 2027 19:56:58 GMT; httponly; samesite=lax; secure
+set-cookie: _mastodon_session=fa0ONY...; path=/; httponly; samesite=lax; secure
+x-request-id: baa606e5-16da-472e-b028-5e52713bae5c
+x-runtime: 0.078938
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Fri, 10 Apr 2026 19:56:58 GMT
+X-Served-By: cache-par-lfpg1960055-PAR, cache-mad2200102-MAD
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1775851018.451239,VS0,VE106
+Strict-Transport-Security: max-age=300
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+
+
+[cookies dpi]: fosstodon.org SETTING: _session_id=eyJfcm...; path=/; expires=Sat, 10 Apr 2027 19:56:58 GMT; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
+[cookies dpi]: fosstodon.org SETTING: _mastodon_session=fa0ONY...; path=/; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
+Redirect to: https://fosstodon.org/
+Nav_open_url: new url='https://fosstodon.org/'
+Connecting to 151.101.195.52:443
+[cookies dpi]: fosstodon.org GETTING: Cookie: _session_id=eyJfcm...; _mastodon_session=fa0ONY...
+>>> sending HTTP:
+GET / HTTP/1.1\x0D
+Host: fosstodon.org\x0D
+User-Agent: Dillo/3.2.0\x0D
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\x0D
+Accept-Language: en-US\x0D
+Accept-Encoding: gzip, deflate, br\x0D
+DNT: 1\x0D
+Referer: https://fosstodon.org/\x0D
+Connection: keep-alive\x0D
+Pragma: no-cache\x0D
+Cache-Control: no-cache\x0D
+Cookie: _session_id=eyJfcm...; _mastodon_session=fa0ONY...
+\x0D
+
+<<< receiving HTTP:
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Type: text/html; charset=utf-8
+server: Mastodon
+x-frame-options: DENY
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: strict-origin-when-cross-origin
+cache-control: private, no-store
+etag: W/"67d965c18304f64dbaaad54c600027c7"
+content-security-policy: base-uri 'none'; default-src 'none'; frame-ancestors 'none'; font-src 'self' https://fosstodon.org; img-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org; media-src 'self' data: https://fosstodon.org https://cdn.fosstodon.org; manifest-src 'self' https://fosstodon.org; form-action 'none'; child-src 'self' blob: https://fosstodon.org; worker-src 'self' blob: https://fosstodon.org; connect-src 'self' data: blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org; script-src 'self' https://fosstodon.org 'wasm-unsafe-eval'; frame-src 'self' https:; style-src 'self' https://fosstodon.org 'nonce-xxxxxx'
+set-cookie: _session_id=eyJfcm...; path=/; expires=Sat, 10 Apr 2027 19:56:58 GMT; httponly; samesite=lax; secure
+set-cookie: _mastodon_session=AAMQps...; path=/; httponly; samesite=lax; secure
+x-request-id: 8e009195-741c-4b27-a23a-227998e90ee8
+x-runtime: 0.036973
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Fri, 10 Apr 2026 19:56:58 GMT
+X-Served-By: cache-par-lfpg1960091-PAR, cache-mad22049-MAD
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1775851019.677258,VS0,VE67
+Vary: Accept-Encoding, Accept, Accept-Language, Cookie
+Strict-Transport-Security: max-age=300
+alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+transfer-encoding: chunked
+
+
+[cookies dpi]: fosstodon.org SETTING: _session_id=eyJfcm...; path=/; expires=Sat, 10 Apr 2027 19:56:58 GMT; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
+[cookies dpi]: fosstodon.org SETTING: _mastodon_session=AAMQps...; path=/; httponly; samesite=lax; secure
+[cookies dpi]: Cookie contains unknown attribute: 'samesite'
