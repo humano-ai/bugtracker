@@ -1,7 +1,7 @@
 Title: Wrong Max-Age parsing using local timezone
 Author: Rodrigo Arias Mallo
 Created: Sat, 11 Apr 2026 10:57:28 +0200
-State: open
+State: closed
 
 With this cookie configuration:
 
@@ -94,3 +94,9 @@ Printing the expired cookie message shows what is going on:
 The cookie comes with a short max-age of 120 seconds (2 minutes) but Dillo is
 considering that it has already expired. This seems to be caused because we are
 not properly parsing the timezone of the cookie.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sun, 12 Apr 2026 00:59:03 +0200
+
+Fixed in <https://git.dillo-browser.org/dillo/commit/?id=122653055658c2a22ad05353ee668aac5c523234>
