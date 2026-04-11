@@ -5,7 +5,7 @@ State: open
 
 List of pending issues that block the next 3.3.0 release:
 
-- [Problems with png-config and fltk-config](/258)
 - ~~[Experimental build with FLTK 1.4.X](/509)~~
 - ~~[Add a control socket](/383)~~
 - ~~[Segmentation fault with display:none in form elements](/506)~~
+- [Wrong Max-Age parsing using local timezone](/521)
