@@ -144,7 +144,7 @@ Okay, so I have already debugged this in 2024:
 
 > The `/auth/sign_in` endpoint will only redirect back to `/oauth/authorize` if
 > the Referer header is "properly" set. In Dillo is set by default to the host of
-> the current URL, not the previous URL. This is controlled by the http_referer
+> the current URL, not the previous URL. This is controlled by the `http_referer`
 > option. Changing it to none (not seding it) causes a failure in brutaldon.org.
 > Changing it to "path" causes it to hold the value of the current URL, which
 > works fine.
@@ -176,3 +176,9 @@ It looks like Mastodon doesn't use the Referer as redirect if:
 
 I would imagine that the best option it to *always* ignore the Referer header
 and all CSRF mitigations are handled via forms.
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Sat, 11 Apr 2026 14:16:54 +0200
+
+Reported to Mastodon: <https://github.com/mastodon/mastodon/issues/38649>
