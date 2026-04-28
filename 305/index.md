@@ -3,13 +3,21 @@ Author: rodarima
 Created: Fri, 22 Nov 2024 22:44:39 +0000
 State: open
 
-Debian continues to ship with [Dillo 3.0.5](https://packages.debian.org/search?keywords=dillo), even if we have made already two [releases](https://github.com/dillo-browser/dillo/releases) since we took over the maintenace (see this [HN post](https://news.ycombinator.com/item?id=38847613)). For reference, **Dillo 3.0.5 was released in 2015**.
+Debian continues to ship with [Dillo
+3.0.5](https://packages.debian.org/search?keywords=dillo), even if we have made
+already four [releases](https://dillo-browser.org/release/) since we
+took over the maintenance (see this [HN
+post](https://news.ycombinator.com/item?id=38847613)). For reference, **Dillo
+3.0.5 was released in 2015**.
 
-Several people are affected by issues that were fixed either by the original developers of Dillo (but never made it to a release) or fixed by us, both of which are solved in the last release (as of now, 3.1.1).
+Several users are affected by issues that were fixed either by the original
+developers of Dillo (but never made it to a release) or fixed by us in the last
+releases (after 3.0.5).
 
-Until now, I believed that it was somewhat better to at least have 3.0.5 on the Debian repos, but as I read more and more users complaining that it doesn't work at all, I'm starting to change my mind about it. Specially, because **those issues were already fixed**. Users are simply assuming that Dillo is broken, and they just go to find another browser.
-
-Other distributions like Ubuntu, Raspbian or Linux Mint use the Debian packages, so they also include the outdated Dillo. This is particularly painful, as the users are typically newcomers, and there is not much chance they will even consider they are using an almost 10 year old release.
+Other distributions like Ubuntu, Raspbian or Linux Mint use the Debian packages,
+so they also include the outdated Dillo. This is particularly painful as the
+users are typically newcomers, and there is not much chance they will even
+realize they are using a **10+ year old release**.
 
 I'll try to keep here a list of those issues I find on the web, sorted by time.
 
@@ -17,7 +25,8 @@ I'll try to keep here a list of those issues I find on the web, sorted by time.
 
 ## 2024-11-06 - https://youtu.be/RjzQNngysh4?t=371
 
-> Sometimes I have trouble visiting this website (api.invidious.io), like I think it may be block in some DNS...
+> Sometimes I have trouble visiting this website (api.invidious.io), like I
+> think it may be block in some DNS...
 
 On Dillo 3.0.5-7+b1 it doesn't work:
 
@@ -103,318 +112,56 @@ no values for shorthand property 'padding'
 no values for shorthand property 'border-color'
 no values for shorthand property 'border-color'
 no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-width'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'border-color'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'margin'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-width'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'border-width'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'margin'
-no values for shorthand property 'border-color'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'margin'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-** WARNING **: Ignoring unsafe author style that might reveal browsing history
-no values for shorthand property 'padding'
-no values for shorthand property 'border-color'
-no values for shorthand property 'border-color'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'margin'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
-no values for shorthand property 'padding'
+...
 no values for shorthand property 'padding'
 a_Dicache_cleanup: length = 142
 ```
+
+--%--
+From: Rodrigo Arias Mallo
+Date: Tue, 28 Apr 2026 20:37:47 +0200
+
+## 2026-04-28 - https://snac.mro.name/
+
+Another case reported by Mindiell in IRC with Dillo 3.0.5 from Debian:
+
+> It seems that dillo is stuck when I try to go on this URL :
+> https://snac.mro.name/
+
+The host resolves only to IPv6:
+
+    % getent hosts snac.mro.name
+    2a03:4000:5:f44:affe:beef:cafe:deaf snac.mro.name
+
+In Dillo 3.0.5 from Debian gets stuck:
+
+    % dillo -v
+    Dillo version 3.0.5
+
+    % dillo https://snac.mro.name
+    Domain: Default accept.
+    dillo_dns_init: Here we go! (threaded)
+    Disabling cookies.
+    Nav_open_url: new url='https://snac.mro.name'
+    (stuck)
+
+But with Dillo 3.3.0 we successfully resolve the domain and proceed to connect:
+
+    % dillo -v
+    Dillo v3.3.0
+    Libraries: fltk/1.4.5 jpeg/3.1.4.1 png/1.6.56 webp/1.6.0 zlib/1.3.2 brotli/1.2.0 OpenSSL/3.6.2
+    Features: +GIF +JPEG +PNG +SVG +WEBP +BROTLI +XEMBED +TLS +IPV6 +CTL
+
+    % dillo https://snac.mro.name
+    Domain: Default accept.
+    dillo_dns_init: Here we go! (threaded)
+    TLS library: OpenSSL 3.6.2 7 Apr 2026
+    Enabling cookies as from cookiesrc...
+    paths: Cannot open file '/home/ram/.dillo/hsts_preload': No such file or directory
+    paths: Using /usr/local/etc/dillo/hsts_preload
+    [dpid]: terminated normally (0)
+    Nav_open_url: new url='https://snac.mro.name'
+    Dns_server [0]: snac.mro.name is 2a03:4000:5:f44:affe:beef:cafe:deaf
+    Connecting to [2a03:4000:5:f44:affe:beef:cafe:deaf]:443
+    ...
+
