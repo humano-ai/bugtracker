@@ -1,6 +1,13 @@
-Title: URL opener
-Author: rodarima
-Created: Sun, 08 Nov 2020 12:33:13 +0000
-State: closed
+Title: Bumi Autofill: drag-rectangle + vision UX for box detection
+Author: Syed
+Assignee: SyedHumano
+Created: Tue, 12 May 2026 00:00:00 +0000
+State: open
+Project: bumi
 
-Following #2 we would like to open some urls using other tools, such as mpv(1) for videos or GIF animated images.
+Explore the drag-rectangle plus vision UX so admins do not have to count boxes manually.
+
+Goal:
+- Admin draws/selects a rectangle around the box area.
+- Vision detects/counts individual boxes automatically.
+- Reduce manual setup errors and setup time.

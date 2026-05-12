@@ -1,18 +1,13 @@
-Title: GIF animation support
-Author: rodarima
-Created: Sun, 08 Nov 2020 10:48:30 +0000
-State: closed
+Title: Bumi Autofill: square box field type for KAMMB template
+Author: Syed
+Assignee: SyedHumano
+Created: Tue, 12 May 2026 00:00:00 +0000
+State: open
+Project: bumi
 
-Can we add GIF support for animation? Here is a test: http://www.lcdf.org/gifsicle/logo.gif
+Build and test the square box field type for the new KAMMB template.
 
---%--
-From: rodarima
-Date: Sun, 08 Nov 2020 12:19:03 +0000
-
-One way may be to allow external programs to be executed when opening certain files. For example we can run mpv from a dpi filter using something like `dpi:/mpv/:http://www.lcdf.org/gifsicle/logo.gif`
-
-This would allow all kinds of formats available into libmpv, and we don't clutter the rendering mechanism in dillo.
-
-See [plumb](http://man.cat-v.org/plan_9/6/plumb) and [rifle](https://github.com/ranger/ranger/blob/master/ranger/config/rifle.conf). These tools could also handle hard-to-scrape websites such as youtube.
-
-So, let's generalize this issue in a general url opener.
+Scope:
+- Support square-box fields in Bumi Autofill.
+- Validate behavior against the new KAMMB template.
+- Confirm output is usable for admin workflows and demos.

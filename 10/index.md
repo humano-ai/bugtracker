@@ -1,12 +1,14 @@
-Title: Enable HTTPS support by default
-Author: rodarima
-Created: Mon, 11 Dec 2023 00:25:32 +0000
-State: closed
+Title: Bumi: eKYC document check and liveness integration
+Author: Ali
+Assignee: al3rez
+Created: Tue, 12 May 2026 00:00:00 +0000
+State: open
+Project: bumi
 
-The --disable-ssl can be used to build dillo without https support.
+Integrate eKYC checks for the live demo flow.
 
---%--
-From: rodarima
-Date: Fri, 22 Dec 2023 20:21:24 +0000
-
-Fixed in #27 
+Scope:
+- Document check: IC validity.
+- Liveness check: face/blink/turn.
+- Return clear pass/fail status in the flow.
+- Make the integration usable in a live environment for sales/investor demos.

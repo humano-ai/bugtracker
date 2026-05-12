@@ -1,11 +1,13 @@
-Title: Update README
-Author: rodarima
-Created: Sun, 17 Dec 2023 18:55:07 +0000
-State: closed
+Title: Kanban tool live and shared with group
+Author: Ali
+Assignee: al3rez
+Created: Tue, 12 May 2026 00:00:00 +0000
+State: open
+Project: humanoai
 
-Tidy REAME:
+Make the Kanban tool live and share the link with the group.
 
-- [x] update the README and move some internal details to some other documents
-- [x] mention the current state of the dillo.org website
-- [x] describe the state of this repo
-- [x] place links to other forks of dillo
+Acceptance:
+- Kanban tool is deployed/live.
+- Link is shared with the group.
+- Team can access and use it for ticket tracking.

@@ -1,16 +1,18 @@
-# Dillo bug tracker
+# Humano.ai cross-project ticket tracker
 
-This repository contains the issues for the Dillo web browser. Each issue is
-contained in a directory named with the issue number. The text of the issue
-is stored in the index.md markdown file and any extra attachments are placed
-inside the issue directory.
+This repository contains Humano.ai issues/tickets. Each issue is contained in a
+directory named with the issue number. The text of the issue is stored in the
+index.md markdown file and any extra attachments are placed inside the issue
+directory.
 
 Issue metadata follows the email headers, example:
 
     Title: Indentation error on cgit diff
     Author: Rodrigo Arias Mallo
+    Assignee: github-username
     Created: Sun, 28 Sep 2025 14:44:28 +0200
     State: open
+    Project: livetwin
 
     Indentation with tabs in cgit diff seems to be broken, elements don't get
     aligned as expected.
@@ -31,3 +33,5 @@ To modify the issues, edit directly the index.md file and run `make` to render
 the output before pushing the changes to upstream.
 
 To close an issue simply change the `State: open` line to `State: closed`.
+Set `Project: <project>` to make the ticket show up in `/PROJECT.html` and in
+the `Project: <project> | <project>` navigation next to `open | any.html`.

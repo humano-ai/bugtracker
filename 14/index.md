@@ -1,10 +1,14 @@
-Title: Fix DuckDuckGo search links
-Author: rodarima
-Created: Sun, 17 Dec 2023 19:15:33 +0000
-State: closed
+Title: GCP security cleanup
+Author: Ali
+Assignee: al3rez
+Created: Tue, 12 May 2026 00:00:00 +0000
+State: open
+Project: humanoai
 
-The DuckDuckGo service that redirects the links from the search page is returning a broken page for non-javascript browsers. They have a meta refresh tag in the body, instead of in the head.
+Perform GCP security cleanup.
 
-Adding the kd=-1 argument causes the DuckDuckGo search results to point directly to the target page avoiding the redirection.
-
-Fixes: #8 
+Scope:
+- Review GCP access, service accounts, keys, and permissions.
+- Remove stale or unnecessary access.
+- Tighten security configuration where needed.
+- Document any risky findings and follow-up actions.

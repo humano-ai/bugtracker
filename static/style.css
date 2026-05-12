@@ -6,6 +6,12 @@ body {
   font-family: sans-serif;
   max-width: 80ch;
   font-size: 16px;
+  min-height: calc(100vh - 6em);
+  display: flex;
+  flex-direction: column;
+}
+body > footer {
+  margin-top: auto;
 }
 h1 {
   margin-top: 0.25em;
@@ -25,7 +31,75 @@ figure {
 footer {
   text-align: center;
   margin-top: 2em;
+  padding-top: 1em;
   clear: both;
+  color: #777;
+  font-size: 14px;
+}
+p.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+  margin: 1em 0;
+}
+p.filters > * { display: inline-flex; align-items: center; }
+.assignee-filter {
+  gap: 0.25em;
+}
+.avatar-stack {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.25em;
+}
+.avatar-stack .avatar-link {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  margin-left: -0.5em;
+  border-radius: 50%;
+}
+.avatar-stack .avatar-link:first-child {
+  margin-left: 0;
+}
+.avatar-stack .avatar-link:hover {
+  position: relative;
+  z-index: 2;
+}
+td.proj-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a.proj-chip, a.proj-link {
+  text-decoration: underline;
+}
+a.proj-chip {
+  display: inline-block;
+  color: #000;
+  background-color: #cdf;
+  border: solid 1px #79a;
+  padding: 0 0.35em;
+  text-decoration: none;
+}
+a.proj-chip.project-livetwin {
+  background-color: #d9f;
+  border-color: #a6c;
+}
+a.proj-chip.project-bumi {
+  background-color: #ffd;
+  border-color: #cc8;
+}
+a.proj-chip.active, a.proj-link.active {
+  font-weight: bold;
+}
+td.title-cell:focus {
+  outline: 2px solid #88a;
+  outline-offset: -2px;
+}
+#projfilter-status a {
+  color: #555;
 }
 pre {
   padding: 0.25em;
@@ -40,17 +114,20 @@ pre {
 }
 
 /* Issue state label */
-span.st {
+span.st,
+span.issue-state {
   display: inline-block;
   text-align: center;
   color: #000;
   padding: 0px 0.25em;
   border: solid 1px #777;
 }
-.st-open {
+.st-open,
+.state-open {
   background-color: #9f9;
 }
-.st-closed {
+.st-closed,
+.state-closed {
   background-color: #eee;
 }
 
@@ -60,12 +137,42 @@ table.issue-index {
   border-spacing: 0;
   font-size: 16px;
   border-collapse: collapse;
+  table-layout: fixed;
 }
+table.issue-index col.c-num    { width: 4em; }
+table.issue-index col.c-proj   { width: 8em; }
+table.issue-index col.c-date   { width: 7em; }
+table.issue-index col.c-state  { width: 5em; }
 table.issue-index td {
   border-collapse: collapse;
   border: solid 1px #eee;
   padding: 0.25em 0.5em;
   vertical-align: top;
+}
+img.avatar {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  object-fit: cover;
+  vertical-align: middle;
+  border: solid 2px #fff;
+  border-radius: 9999px;
+  margin: 0;
+  background: #eee;
+}
+img.avatar-large {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+}
+table.issue-index td.title-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0; /* lets ellipsis take effect inside a fixed table */
 }
 table.issue-index td.st {
   text-align: center;

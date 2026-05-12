@@ -12,7 +12,17 @@ p=$n/index.md
 
 echo "Title: " >> $p
 echo "Author: $(git config get user.name)" >> $p
+echo "Assignee: $(git config get github.user || git config get user.name)" >> $p
 echo "Created: $(date -R)" >> $p
 echo "State: open" >> $p
+printf "Project: " >> $p
+
+printf "Project (optional): "
+read project
+if [ -n "$project" ]; then
+  printf "%s\n" "$project" >> $p
+else
+  printf "\n" >> $p
+fi
 
 echo "\$EDITOR $n/index.md"
