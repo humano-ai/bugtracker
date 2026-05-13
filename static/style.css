@@ -130,8 +130,8 @@ span.issue-state {
 .state-closed {
   background-color: #eee;
 }
-.st-waiting-uat,
-.state-waiting-uat {
+.st-uat,
+.state-uat {
   background-color: #ffd86b;
 }
 

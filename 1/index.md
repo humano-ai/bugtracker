@@ -2,12 +2,12 @@ Title: Slide auto-advance: avatar narrates but change_slide tool never fires
 Author: Alireza
 Assignee: al3rez
 Created: Tue, 12 May 2026 09:22:09 +0000
-State: waiting-uat
+State: uat
 Project: livetwin
 
 During a Tavus call with a deck attached, the avatar narrates slide content out loud but the deck stays stuck on slide 1. The `change_slide` tool is never invoked, so auto-advance does not work. UI shows a "Failed" pill on tool calls.
 
-**Status**: waiting for UAT after the self-driving multi-slide lecture fix was pushed to `development`.
+**Status**: UAT after the self-driving multi-slide lecture fix was pushed to `development`.
 - gpt-4o-mini → gpt-4o (commit 3a09106)
 - Personalize greeting even when template has no `{{name}}` placeholder (ccc91df)
 - Stamp `tavus_conversation_id` + bump `updated_at` so `change_slide` can resolve the active conversation (63c84b9)
