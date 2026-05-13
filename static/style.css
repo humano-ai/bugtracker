@@ -130,6 +130,10 @@ span.issue-state {
 .state-closed {
   background-color: #eee;
 }
+.st-waiting-uat,
+.state-waiting-uat {
+  background-color: #ffd86b;
+}
 
 /* Issue index view */
 table.issue-index {
