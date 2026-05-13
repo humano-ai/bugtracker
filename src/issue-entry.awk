@@ -22,7 +22,11 @@ END {
 		printf "<tr data-project='%s'>\n", escape(project)
 		printf "  <td><a href='%d/'>#%d</a></td>\n", n, n
 		printf "  <td class='title-cell' tabindex='0' title='%s' aria-label='%s'>%s</td>\n", escape(title), escape(title), escape(title)
-		printf "  <td class='proj-cell'><a class='proj-chip project-%s' href='%s.html'>%s</a></td>\n", escape(project), escape(project), escape(project)
+		proj_href = project ".html"
+		if (a != "") {
+			proj_href = "assignee-" a "-" project ".html"
+		}
+		printf "  <td class='proj-cell'><a class='proj-chip project-%s' href='%s'>%s</a></td>\n", escape(project), escape(proj_href), escape(project)
 		#printf "  <td>%d</td>\n", c
 		printf "  <td style='white-space: nowrap'>%s</td>\n", modif
 		printf "  <td><span class='issue-state state-%s'>%s</span></td>\n", state, state

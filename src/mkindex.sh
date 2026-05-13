@@ -1,8 +1,12 @@
 #!/bin/sh -e
 
-projects=$(find . -maxdepth 2 -name index.md -print \
-  | xargs awk '/^Project: / { sub("Project: ", ""); print; nextfile }' \
-  | sort -u)
+projects=$(for f in $(find . -maxdepth 2 -name index.md -print); do
+  awk -v a="$ASSIGNEE_FILTER" '
+    /^Project: / { sub("Project: ", ""); project=$0 }
+    /^Assignee: / { sub("Assignee: ", ""); assignee=$0 }
+    END { if (project != "" && (a == "" || assignee == a)) print project }
+  ' "$f"
+done | sort -u)
 assignees=$(find . -maxdepth 2 -name index.md -print \
   | xargs awk '/^Assignee: / { sub("Assignee: ", ""); print; nextfile }' \
   | sort -u)
@@ -28,7 +32,7 @@ cat <<EOF
   <link rel='shortcut icon' href='https://e32d51af3de97804b3f8dcfcb7e70a04.cdn.bubble.io/f1714242605974x627282198030633300/humano-fav-icon.png' />
 </head>
 <body>
-  <p class='filters'><span class='assignee-filter'>Assignee: <span class='avatar-stack'>$avatars</span></span> State: <a href="./">open</a> | <a href="any.html">any</a>$(printf '%s\n' "$projects" | awk 'NF { if (!done) { printf " &nbsp;Project: "; done=1 } else { printf " | " }; printf "<a href=\"%s.html\">%s</a>", $0, $0 }')</p>
+  <p class='filters'><span class='assignee-filter'>Assignee: <span class='avatar-stack'>$avatars</span></span> State: <a href="./">open</a> | <a href="any.html">any</a>$(printf '%s\n' "$projects" | awk -v a="$ASSIGNEE_FILTER" 'NF { if (!done) { printf " &nbsp;Project: "; done=1 } else { printf " | " }; if (a != "") printf "<a href=\"assignee-%s-%s.html\">%s</a>", a, $0, $0; else printf "<a href=\"%s.html\">%s</a>", $0, $0 }')</p>
   <table class='issue-index'>
     <colgroup>
       <col class='c-num' />
