@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Humano - Slide auto-advance: avatar narrates but change_slide tool never fires</title>
+  <meta name='title' content='Humano - Slide auto-advance: avatar narrates but change_slide tool never fires' />
+  <meta property='og:title' content='Humano - Slide auto-advance: avatar narrates but change_slide tool never fires' />
+  <meta property='og:type' content='website' />
+  <meta property='og:url' content='https://humano-ai.github.io/bugtracker/' />
+  <meta name='twitter:card' content='summary' />
+  <meta name='twitter:title' content='Humano - Slide auto-advance: avatar narrates but change_slide tool never fires' />
+  <base href='/bugtracker/' />
+  <link rel='stylesheet' href='style.css' type='text/css' />
+  <link rel='icon' href='https://e32d51af3de97804b3f8dcfcb7e70a04.cdn.bubble.io/f1714242605974x627282198030633300/humano-fav-icon.png' />
+  <link rel='shortcut icon' href='https://e32d51af3de97804b3f8dcfcb7e70a04.cdn.bubble.io/f1714242605974x627282198030633300/humano-fav-icon.png' />
+</head>
+<body>
+  <table class='issue-meta'>
+    <tr><th>Title</th><td>Slide auto-advance: avatar narrates but change_slide tool never fires</td></tr>
+    <tr><th>Author</th><td>Alireza</td></tr>
+    <tr><th>Assignee</th><td><img class='avatar' src='https://github.com/al3rez.png?size=40' alt='al3rez' title='al3rez' loading='lazy' /> al3rez</td></tr>
+    <tr><th>Created</th><td>Tue, 12 May 2026 09:22:09 +0000</td></tr>
+    <tr><th>State</th>    <td><span class='issue-state state-uat'>uat</span></td>    </tr>
+    <tr><th>Project</th><td><a href='livetwin.html'>livetwin</a></td></tr>
+  </table>
+<p>During a Tavus call with a deck attached, the avatar narrates slide content out loud but the deck stays stuck on slide 1. The <code>change_slide</code> tool is never invoked, so auto-advance does not work. UI shows a &quot;Failed&quot; pill on tool calls.</p>
+<p><strong>Status</strong>: UAT after the self-driving multi-slide lecture fix was pushed to <code>development</code>.</p>
+<ul>
+<li>gpt-4o-mini → gpt-4o (commit 3a09106)</li>
+<li>Personalize greeting even when template has no <code>{{name}}</code> placeholder (ccc91df)</li>
+<li>Stamp <code>tavus_conversation_id</code> + bump <code>updated_at</code> so <code>change_slide</code> can resolve the active conversation (63c84b9)</li>
+<li>Backfilled <code>slide_texts</code> for deck cdae25c4 so the lecture-mode prompt loads</li>
+<li>Self-driving multi-slide lecture chain pushed in d7c8783: narration accumulator stitches all assistant narrations in the <code>runTools</code> chain, cap raised to 25 chained completions, prompt now requires repeated <code>narrate → change_slide</code> within one LLM turn.</li>
+</ul>
+<p><strong>Next / UAT</strong>: wait for Vercel deploy, retest on <a href="https://app.livetwin.ai/b673eddd-7b1d-448c-ae39-a6b5617140cf">https://app.livetwin.ai/b673eddd-7b1d-448c-ae39-a6b5617140cf</a>, and confirm one POST to <code>/api/v1/chat/completions</code> produces multiple <code>Function call: change_slide</code> logs while <code>current_slide_index</code> advances through the deck.</p>
+<p><strong>Update 2026-05-12</strong>: Slide control fix via GPT-4 swap is targeted for end of today.</p>
+<div id='c1' class='comment'>
+  <div class='comment-meta'>
+    <a href='#c1'>Claude</a> on <i>Wed, 13 May 2026 13:12:45 +0000</i>
+  </div>
+<p>Pushed d7c8783 on <code>development</code>:</p>
+<ul>
+<li><strong>route.ts</strong>: narration accumulator now collects content from every assistant message in the <code>runTools</code> chain (not just the final one), so multi-step <code>narrate → change_slide → narrate → change_slide</code> flows stitch all narrations into one Tavus response. Chained completions cap raised to 25.</li>
+<li><strong>Lecture prompt rewrite</strong>: explicit self-driving instructions — multiple <code>change_slide</code> calls per response are required and expected. Handles viewer interrupts (pause + answer), affirmatives (&quot;ok&quot;, &quot;got it&quot; → keep chaining), and back-nav (&quot;go back to slide 3&quot; → <code>prev</code>/<code>goto</code> then re-narrate).</li>
+</ul>
+<p>Next: wait for Vercel deploy, retest call, confirm a single POST to <code>/api/v1/chat/completions</code> produces multiple <code>change_slide</code> tool calls and the avatar auto-advances through the deck.</p>
+</div>
+<footer><a href='./'>&larr; Index</a></footer></body></html>
